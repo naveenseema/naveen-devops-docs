@@ -1,0 +1,165 @@
+    1  minikube start
+    2  minikube start --driver=docker
+    3  clear
+    4  sudo apt install gnome-terminal
+    5  clear
+    6  # Add Docker's official GPG key:
+    7  sudo apt-get update
+    8  sudo apt-get install ca-certificates curl
+    9  sudo install -m 0755 -d /etc/apt/keyrings
+   10  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   11  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   12  # Add the repository to Apt sources:
+   13  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   14    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   15  sudo apt-get update
+   16  clear
+   17  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   18  clear
+   19  v
+   20  sudo docker run hello-world
+   21  v
+   22  minikube start
+   23  minikube start --driver=docker
+   24  clear
+   25  sudo groupadd docker
+   26  sudo usermod -aG docker $USER
+   27  sudo reboot
+   28  su -
+   29  sudo -i
+   30  sudo -i
+   31  newgrp docker
+   32  clear
+   33  docker run hello-world
+   34  sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+   35  sudo chmod g+rwx "$HOME/.docker" -R
+   36  sudo systemctl enable docker.service
+   37  sudo systemctl enable containerd.service
+   38  clear
+   39  minikube start --driver=docker
+   40  minikube config set driver docker
+   41  minikube start
+   42  kubectl get po -A
+   43  minikube kubectl -- get po -A
+   44  kubectl get po -A
+   45  sudo apt install <deb name>
+   46  uname -m
+   47  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   48  clear
+   49  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+   50  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+   51  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   52  kubectl version --client
+   53  kubectl version --client --output=yaml
+   54  sudo apt-get update
+   55  sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
+   56  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.33/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   57  sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   58  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   59  sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
+   60  clear
+   61  sudo apt-get update
+   62  sudo apt-get install -y kubectl
+   63  clear
+   64  kubectl cluster-info
+   65  kubectl cluster-info dump
+   66  kubectl cluster-info
+   67  clear
+   68  kubectl cluster-info
+   69  kubectl get po -A
+   70  sudo -i
+   71  sudo passwd naveen
+   72  sudo -i
+   73  clear
+   74  cd
+   75  minikube status
+   76  minikube start
+   77  clear
+   78  kubectl create deployment my-nginx-app --image=nginx:latest --replicas=2
+   79  kubectl create deployment
+   80  kubectl create deployment my-nginx-app --image=nginx:latest --replicas=2
+   81  kubectl create deployment
+   82  kubectl create deployment my-nginx-app --image=nginx:latest
+   83  kubectl create deployment my-app
+   84  kubectl run
+   85  clear
+   86  kubectl get deployments
+   87  kubectl get pods -l app=my-nginx-app # Use label to filter pods belonging to this deployment
+   88  kubectl expose deployment my-nginx-app --type=NodePort --port=80 --name=nginx-service
+   89  minikube service nginx-service --url
+   90  kubectl delete service nginx-service
+   91  kubectl delete deployment my-nginx-app
+   92  kubectl get deployments
+   93  clear
+   94  # nginx-deployment.yaml
+   95  apiVersion: apps/v1
+   96  kind: Deployment
+   97  metadata:
+   98  spec:
+   99  clear
+  100  nginx-deployment.yaml
+  101  # nginx-deployment.yaml
+  102  apiVersion: apps/v1
+  103  kind: Deployment
+  104  metadata:
+  105  spec:
+  106  clear
+  107  nano nginx-service.yaml
+  108  vim nginx-service.yaml
+  109  vim nginx-deployment.yaml
+  110  kubectl apply -f nginx-deployment.yaml
+  111  kubectl apply -f nginx-service.yaml
+  112  kubectl get deployments
+  113  kubectl get svc
+  114  kubectl get deployments,pods,services -l app=nginx
+  115  clear
+  116  minikube service nginx-declarative-service --url
+  117  kubectl delete -f nginx-deployment.yaml
+  118  kubectl delete -f nginx-service.yaml
+  119  kubectl get deployments,pods,services -l app=nginx
+  120  clear
+  121  history
+  122  cd
+  123  whoami
+  124  sudo -i
+  125  docker ps
+  126  docker ps -A
+  127  docker ps -a
+  128  ip add
+  129  docker login
+  130  docker images
+  131  docker tag my-nginx:latest 
+  132  docker tag my-nginx naveen/my-nginx:latest
+  133  docker push naveen/my-nginx:latest
+  134  docker images
+  135  docker push my-nginx:latest
+  136  docker info
+  137  docker push naveen/my-nginx:latest
+  138  docker login
+  139  docker push my-nginx:latest
+  140  docker tag my-nginx naveenseema/my-nginx
+  141  docker tag
+  142  docker tags
+  143  docker images
+  144  docker push naveenseema/my-nginx
+  145  kubectl  get pods -A
+  146  minikube start --driver=docker
+  147  minikube status
+  148  kubectl  get nodes
+  149  kubectl  get pods
+  150  kubectl  get pods -A
+  151  docker images
+  152  ls -tlr
+  153  cd workspace/naveen-devops-docs/
+  154  ls -tlr
+  155  cd docker/
+  156  ls -tlr
+  157  kubectl  create ns nginx
+  158  kubectl  apply -f my-nginx-deployment.yaml -n nginx
+  159  kubectl  get pods -n nginx
+  160  kubectl  get svc -n ngix
+  161  kubectl  get svc -n nginx
+  162  cd ..
+  163  git add .
+  164  history 
+  165  history  > learning-17062025.txt
