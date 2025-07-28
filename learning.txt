@@ -1,0 +1,1000 @@
+   12  # Add the repository to Apt sources:
+   13  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   14    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   15  sudo apt-get update
+   16  clear
+   17  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   18  clear
+   19  v
+   20  sudo docker run hello-world
+   21  v
+   22  minikube start
+   23  minikube start --driver=docker
+   24  clear
+   25  sudo groupadd docker
+   26  sudo usermod -aG docker $USER
+   27  sudo reboot
+   28  su -
+   29  sudo -i
+   30  sudo -i
+   31  newgrp docker
+   32  clear
+   33  docker run hello-world
+   34  sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+   35  sudo chmod g+rwx "$HOME/.docker" -R
+   36  sudo systemctl enable docker.service
+   37  sudo systemctl enable containerd.service
+   38  clear
+   39  minikube start --driver=docker
+   40  minikube config set driver docker
+   41  minikube start
+   42  kubectl get po -A
+   43  minikube kubectl -- get po -A
+   44  kubectl get po -A
+   45  sudo apt install <deb name>
+   46  uname -m
+   47  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   48  clear
+   49  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+   50  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+   51  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   52  kubectl version --client
+   53  kubectl version --client --output=yaml
+   54  sudo apt-get update
+   55  sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
+   56  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.33/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   57  sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   58  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   59  sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
+   60  clear
+   61  sudo apt-get update
+   62  sudo apt-get install -y kubectl
+   63  clear
+   64  kubectl cluster-info
+   65  kubectl cluster-info dump
+   66  kubectl cluster-info
+   67  clear
+   68  kubectl cluster-info
+   69  kubectl get po -A
+   70  sudo -i
+   71  sudo passwd naveen
+   72  sudo -i
+   73  clear
+   74  cd
+   75  minikube status
+   76  minikube start
+   77  clear
+   78  kubectl create deployment my-nginx-app --image=nginx:latest --replicas=2
+   79  kubectl create deployment
+   80  kubectl create deployment my-nginx-app --image=nginx:latest --replicas=2
+   81  kubectl create deployment
+   82  kubectl create deployment my-nginx-app --image=nginx:latest
+   83  kubectl create deployment my-app
+   84  kubectl run
+   85  clear
+   86  kubectl get deployments
+   87  kubectl get pods -l app=my-nginx-app # Use label to filter pods belonging to this deployment
+   88  kubectl expose deployment my-nginx-app --type=NodePort --port=80 --name=nginx-service
+   89  minikube service nginx-service --url
+   90  kubectl delete service nginx-service
+   91  kubectl delete deployment my-nginx-app
+   92  kubectl get deployments
+   93  clear
+   94  # nginx-deployment.yaml
+   95  apiVersion: apps/v1
+   96  kind: Deployment
+   97  metadata:
+   98  spec:
+   99  clear
+  100  nginx-deployment.yaml
+  101  # nginx-deployment.yaml
+  102  apiVersion: apps/v1
+  103  kind: Deployment
+  104  metadata:
+  105  spec:
+  106  clear
+  107  nano nginx-service.yaml
+  108  vim nginx-service.yaml
+  109  vim nginx-deployment.yaml
+  110  kubectl apply -f nginx-deployment.yaml
+  111  kubectl apply -f nginx-service.yaml
+  112  kubectl get deployments
+  113  kubectl get svc
+  114  kubectl get deployments,pods,services -l app=nginx
+  115  clear
+  116  minikube service nginx-declarative-service --url
+  117  kubectl delete -f nginx-deployment.yaml
+  118  kubectl delete -f nginx-service.yaml
+  119  kubectl get deployments,pods,services -l app=nginx
+  120  clear
+  121  history
+  122  cd
+  123  whoami
+  124  sudo -i
+  125  docker ps -A
+  126  docker ps -a
+  127  ip add
+  128  docker login
+  129  docker images
+  130  docker tag my-nginx:latest 
+  131  docker tag my-nginx naveen/my-nginx:latest
+  132  docker push naveen/my-nginx:latest
+  133  docker images
+  134  docker push my-nginx:latest
+  135  docker info
+  136  docker push naveen/my-nginx:latest
+  137  docker login
+  138  docker push my-nginx:latest
+  139  docker tag my-nginx naveenseema/my-nginx
+  140  docker tag
+  141  docker tags
+  142  docker images
+  143  docker push naveenseema/my-nginx
+  144  kubectl  get pods -A
+  145  minikube start --driver=docker
+  146  minikube status
+  147  kubectl  get nodes
+  148  kubectl  get pods
+  149  kubectl  get pods -A
+  150  docker images
+  151  ls -tlr
+  152  cd workspace/naveen-devops-docs/
+  153  ls -tlr
+  154  cd docker/
+  155  ls -tlr
+  156  kubectl  create ns nginx
+  157  kubectl  apply -f my-nginx-deployment.yaml -n nginx
+  158  kubectl  get pods -n nginx
+  159  kubectl  get svc -n ngix
+  160  kubectl  get svc -n nginx
+  161  cd ..
+  162  git add .
+  163  history 
+  164  history  > learning-17062025.txt
+  165  git add .
+  166  git commit -m "Docker learning"
+  167  git push origin master 
+  168  mkdir devops
+  169  cd devops
+  170  vim devopsengineer.txt
+  171  git add .
+  172  git commit -m "devops engineer"
+  173  git push origin master
+  174  git status
+  175  docker ps
+  176  docker ps nginx
+  177  ipaddr
+  178  ipadr
+  179  ip
+  180  ip a
+  181  clear
+  182  docker images
+  183  kubectl --version
+  184  kubectl get pods
+  185  kubectl get pods -A
+  186  ip a
+  187  clear
+  188  kubectl get pods
+  189  minikube start
+  190  minikube status
+  191  clear
+  192  kubectl get pods
+  193  docker images
+  194  docker tag my-html-app naveen/my-html-app:latest
+  195  docker images
+  196  docker push naveen/my-html-app:latest
+  197  docker push naveenseema/my-html-app:latest
+  198  clear
+  199  docker images
+  200  docker delete naveen/my-html-app
+  201  docker rmi naveen/my-html-app
+  202  docker images
+  203  docker tag my-html-app naveenseema/my-html-app:latest
+  204  docker images
+  205  clear
+  206  docker push naveenseema/my-html-app:latest
+  207  docker images
+  208  clear
+  209  vim deployment.yaml
+  210  vim service.yaml
+  211  kubectl apply -f deployment.yaml
+  212  kubectl apply -f service.yaml
+  213  vim service.yaml
+  214  kubectl apply -f service.yaml
+  215  kubectl get pods
+  216  vim service.yaml
+  217  kubectl apply -f service.yaml
+  218  kubectl get svc
+  219  docker ps
+  220  clear
+  221  git status
+  222  ls -ltr
+  223  cd workspace/
+  224  ls -ltr
+  225  git status
+  226  clear
+  227  cd .
+  228  cd ..
+  229  git clone https://github.com/naveenseema/git-seema.git
+  230  git status
+  231  mkdir mydata
+  232  ls -ltr
+  233  cd mydata
+  234  cd ..
+  235  cd workspace/
+  236  ls -ltr
+  237  cd naveen-devops-docs/
+  238  ls -ltr
+  239  cd .
+  240  cd ..
+  241  clear
+  242  cd ..
+  243  cd mydata/
+  244  vim ansible.txt
+  245  git add mydata
+  246  git add .
+  247  git init
+  248  git status
+  249  clear
+  250  git add mydata
+  251  ls -ltr
+  252  git add ansible.txt 
+  253  git add .
+  254  git commit -m "ansbile commands"
+  255  git push origin master
+  256  git status
+  257  git push origin master
+  258  clear
+  259  git remote -v
+  260  git remote add origin https://github.com/naveenseema/git-seema.git
+  261  git push -u origin master
+  262  git push -u origin main
+  263  git status
+  264  clear
+  265  cd ..
+  266  cd workspace/
+  267  ls -ltr
+  268  cd n
+  269  cd naveen-devops-docs/
+  270  ls -ltr
+  271  cd ..
+  272  rm mydata
+  273  rm -rf mydata
+  274  ls -ltr
+  275  cd git-seema/
+  276  ls -ltr
+  277  git status
+  278  clear
+  279  mkdir mydata
+  280  ls -ltr
+  281  cd mydata/
+  282  vim ansible.txt
+  283  git add ansible.txt 
+  284  git commit -m "ansible commands"
+  285  git push origin main
+  286  clear
+  287  cd ..
+  288  docker images
+  289  kubectl get pods
+  290  kubectl get pods -A
+  291  docker images
+  292  clear
+  293  docker login
+  294  vim index.html
+  295  cd /usr
+  296  ls -ltr
+  297  cd share/
+  298  ls -ltr
+  299  cd nginx
+  300  cd ..
+  301  cd.
+  302  cd 
+  303  clear
+  304  docker pull nginx
+  305  docker images
+  306  cp index.html /usr/share/nginx/html/index.html
+  307  cd /usr
+  308  cd share/
+  309  cd nginx
+  310  cd
+  311  docker login
+  312  docker images
+  313  ls -ltr
+  314  clear
+  315  rm -rf index.html
+  316  ls -ltr
+  317  my-html-app/
+  318  │
+  319  ├── Dockerfile
+  320  └── index.html
+  321  mkdir my-html-app/
+  322  clear
+  323  cd my-html-app/
+  324  mkdir dockerfile
+  325  vim index.html
+  326  vim dockerfile
+  327  # Use official Nginx image
+  328  FROM nginx:alpine
+  329  # Copy the HTML file into Nginx's default html directory
+  330  COPY index.html /usr/share/nginx/html/index.html
+  331  # Expose port 80
+  332  EXPOSE 80
+  333  ls -ltr
+  334  rm -rf dockerfile/
+  335  vim dockerfile.txt
+  336  docker build -t my-html-app .
+  337  ls -ltr
+  338  rm -rf
+  339  clear
+  340  ls -ltr
+  341  rm -rf dockerfile.txt 
+  342  ls -ltr
+  343  vim dockerfile
+  344  docker build -t my-html-app .
+  345  docker run -d -p 8080:80 my-html-app
+  346  docker ps
+  347  ifconfig
+  348  docker images
+  349  kubectl get pods
+  350  kubectl get pods -A
+  351  minikube start
+  352  minikube status
+  353  kubectl get pods
+  354  kubectl get pods -A
+  355  docker images
+  356  ls -ltr
+  357  docker login
+  358  docker images
+  359  exit
+  360  terraform version
+  361  ip a
+  362  adduser naveen
+  363  sudo -i
+  364  sudo apt update
+  365  suod apt update
+  366  sudo  apt update
+  367  sudo apt install mysql-server
+  368  sudo systemctl status mysql
+  369  sudo secure_mysql_installation
+  370  sudo mysql_secure_installation
+  371  sudo mysql
+  372  sudo mysql -u root -p
+  373  sudo snap install mysql-workbench-community
+  374  mysql-workbench
+  375  sudo mysql -u root -p
+  376  cat /etc/os-release
+  377  minikube version
+  378  minikube status
+  379  minikube start
+  380  kubectl get pods -A
+  381  kubectl ns
+  382  sudo -i
+  383  minikube status
+  384  minikube start
+  385  minikube status
+  386  sudo apt list --installed | grep mysql-workbench
+  387  dpkg -l | grep mysql-workbench
+  388  sudo dpkg --remove <mysql-workbench-community>
+  389  sudo apt autoremove
+  390  cd downloads/
+  391  cd downloads
+  392  ls -l
+  393  cd Downloads/
+  394  sudo -i
+  395  cd /usr
+  396  ls -l
+  397  cd bin/
+  398  ls -l
+  399  clear
+  400  cd
+  401  cd ~/Downloads
+  402  pwd
+  403  cd /home/naveen
+  404  ls -l
+  405  cd /home
+  406  ls -l
+  407  cd /naveen
+  408  cd naveen
+  409  cd /home
+  410  ls -l
+  411  cd naveen/
+  412  clear
+  413  sudo -i
+  414  systemctl status mysql
+  415  systemctl stop mysql
+  416  systemctl stop mysql.service
+  417  sudo service mysql stop
+  418  systemctl status mysql
+  419  sudo service mysql start
+  420  systemctl status mysql
+  421  sudo mysql -u root -p
+  422  ip addr show eth0 | grep inet
+  423  sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+  424  sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+  425  sudo service mysql restart
+  426  ip addr show eth0 | grep inet
+  427  cd logs
+  428  cd logs/
+  429  sudo -i
+  430  vim test.sh
+  431  ./test.sh
+  432  chmod +x test.sh
+  433  ./test.sh
+  434  ls -l
+  435  cd test.sh
+  436  rm -rf test.sh
+  437  ls -l
+  438  rm -rf nawin
+  439  rm -rf seema
+  440  ls -l
+  441  cd /etc/passwd
+  442  cd /etc
+  443  ls -l
+  444  cat passwd
+  445  userdel naveen
+  446  cat shadow
+  447  cat /etc/passwd navven
+  448  cd
+  449  sudo -i
+  450  sudo cat /etc/shadow
+  451  ls -l
+  452  touch test.sh
+  453  ls -l
+  454  vim test.sh 
+  455  ./test.sh
+  456  chmod +x test.sh
+  457  ls -l
+  458  ./test.sh
+  459  sudo ./test.sh
+  460  su nawin
+  461  cat /etc/passwd
+  462  userdel nawin
+  463  sudo userdel nawin
+  464  sudo -i
+  465  minikube status
+  466  minikube version
+  467  kubectl get pods -A
+  468  helm
+  469  kubectl get deploy
+  470  kubectl get svc
+  471  kubectl get crd
+  472  curl -I  10.97.244.105
+  473  ifconfig
+  474  ip addr
+  475  sudo apt update && sudo apt upgrade -y
+  476  sudo apt install curl gnupg -y
+  477  curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+  478  sudo apt install apt-transport-https --yes
+  479  echo "deb https://baltocdn.com/helm/stable/debian/ all main" |   sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+  480  sudo apt update
+  481  sudo apt intsall helm -y
+  482  sudo apt install helm -y
+  483  helm version
+  484  helm
+  485  helm upgrade
+  486  kubectl get nodes
+  487  helm version
+  488  helm repo add bitnami https://charts.bitnami.com/bitnami
+  489  helm repo update
+  490  helm install my-nginx bitnami/nginx
+  491  helm list
+  492  kubectl get all
+  493  minikube service my-nginx --url
+  494  kubectl svc
+  495  kubectl get nodes
+  496  kubectl deploy
+  497  helm list
+  498  minikube service my-nginx --url
+  499  helm search repo nginx
+  500  uname
+  501  helm uninstall my-nginx
+  502  cd /var
+  503  ls -l
+  504  cd log
+  505  ls -l
+  506  cd syslog
+  507  cat syslog 
+  508  grep "Failed password" /var/log/auth.log
+  509  curl https://www.google.com
+  510  curl https://google.com
+  511  curl http://localhost:3306
+  512  curl -I http://localhost:3306
+  513  uname -a
+  514  cat /etc/passwd
+  515  sudo userdel nawin
+  516  sudo userdel -r nawin
+  517  sudo userdel -r seema
+  518  sudo passwd -S nawin
+  519  ps -u nawin
+  520  sudo pkill -u nawin
+  521  sudo userdel nawin
+  522  sudo userdel -r nawin
+  523  sudo rm -rf /home/nawin
+  524  cat /etc/passwd
+  525  vim /etc/passwd
+  526  cat /etc/passwd
+  527  vim /etc/shadow
+  528  sudo -i
+  529  vim greet.sh
+  530  ./greet.sh Naveen Bash
+  531  chmod +x greet.sh
+  532  ./greet.sh Naveen Bash
+  533  cat greet.sh
+  534  clear
+  535  top
+  536  htop
+  537  lsblk
+  538  df -h
+  539  df -hT
+  540  pvs
+  541  du
+  542  du -h
+  543  pwd
+  544  cd /var
+  545  ls -l
+  546  cd log
+  547  ls -l
+  548  cd mysql/
+  549  ls -l
+  550  vim error.log 
+  551  cd .
+  552  cd ..
+  553  cd syslog
+  554  vim syslog
+  555  ls -l
+  556  sudo -i
+  557  sudo -i
+  558  sudo apt update
+  559  sudo apt install lvm2
+  560  pvs
+  561  sudo -i
+  562  # Create three virtual disk files of 1GB each
+  563  sudo fallocate -l 1G /mnt/wslg/disk1.img
+  564  sudo fallocate -l 1G /mnt/wslg/disk2.img
+  565  sudo fallocate -l 1G /mnt/wslg/disk3.img
+  566  # Verify they are created
+  567  ls -lh /mnt/wslg/disk*.img
+  568  sudo pvcreate /mnt/wslg/disk1.img
+  569  # Create three virtual disk files of 1GB each in your home directory
+  570  # You can adjust the path if you prefer, e.g., /tmp/disk1.img
+  571  sudo fallocate -l 1G ~/disk1.img
+  572  sudo fallocate -l 1G ~/disk2.img
+  573  sudo fallocate -l 1G ~/disk3.img
+  574  # Verify they are created
+  575  ls -lh ~/disk*.img
+  576  sudo losetup -f ~/disk1.img
+  577  sudo losetup -f ~/disk2.img
+  578  sudo losetup -f ~/disk3.img
+  579  sudo losetup -a
+  580  losetup -a
+  581  sudo pvcreate /dev/loop0
+  582  sudo pvcreate /dev/loop1
+  583  sudo pvcreate /dev/loop2
+  584  pvs
+  585  sudo pvs
+  586  sudo pv display
+  587  sudo pvs display
+  588  sudo pvdisplay
+  589  sudo vgcraete myvg /dev/loop0 /dev/loop1
+  590  sudo vgcreate myvg /dev/loop0 /dev/loop1
+  591  sudo vgextend myvg /dev/loop2
+  592  sudo vgs
+  593  sudo vgdisplay
+  594  sudo lvcreate -L 500MB -n lvdata1 myvg
+  595  sudo lvcreate -l 100%FREE -n lvdata2 myvg
+  596  sudo lvs
+  597  sudo lvdisplay
+  598  sudo mkfs.ext4 /dev/myvg/lvdata1
+  599  sudo mkfs.xfs /dev/myvg/lvdata2
+  600  sudo mkfs.ext4 /dev/myvg/lvdata2
+  601  sudo mkdir /mnt/data1
+  602  sudo mkdir /mnt/data2
+  603  sudo mount /dev/myvg/lvdata1 /mnt/data1
+  604  sudo mount /dev/myvg/lvdata2 /mnt/data2
+  605  df -h
+  606  sudo lvextend -L +200M /dev/myvg/lvdata1
+  607  sudo lvextend -L +50M /dev/myvg/lvdata1
+  608  sudo lvextend -L +200M /dev/myvg/lvdata2
+  609  lvdisplay
+  610  sudo lvdisplay
+  611  sudo lvreduce -L -200M /dev/myvg/lvdata1
+  612  lvdisplay
+  613  sudo lvdisplay
+  614  sudo lvextend -L +200M /dev/myvg/lvdata1
+  615  sudo resize2fs /dev/myvg/lvdata1
+  616  df -h /mnt/data1
+  617  df -hT
+  618  ssh
+  619  sudo umount /mnt/data1
+  620  df -hT
+  621  sudo e2fsck /dev/myvg/lvdata1 #for ext4
+  622  sudo mount /mnt/data1
+  623  sudo mount /dev/myvg/lvdata1 /mnt/data1
+  624  df -hT
+  625  sudo umount /mnt/data2
+  626  sudo e2fsck /dev/myvg/lvdata2 #for ext4
+  627  sudo resize2fs /dev/myvg/lvdata2 +400M
+  628  sudo -f e2fsck /dev/myvg/lvdata2 #for ext4
+  629  sudo e2fsck -f /dev/myvg/lvdata2 #for ext4
+  630  sudo resize2fs /dev/myvg/data2 400M
+  631  sudo resize2fs /dev/myvg/lvdata2 400M
+  632  df -hT
+  633  sudo mount /dev/myvg/lvdata2 /mnt/data2
+  634  df -h /mnt/data2
+  635  df -h
+  636  sudo umount /mnt/data1
+  637  sudo umount /mnt/data2
+  638  df -h
+  639  sudo lvremove /dev/myvg/lvdata1
+  640  sudo lvchange -an /dev/myvg/lvdata1
+  641  sudo lvremove /dev/myvg/lvdata1
+  642  sudo lvremove /dev/myvg/lvdata2
+  643  sudo lvs
+  644  sudo lvdipslya
+  645  sudo lvdisplay
+  646  sudo vg remove myvg
+  647  sudo vgd
+  648  sudo vgs
+  649  sudo vgremove myvg
+  650  sudo vgs
+  651  sudo pvremove /dev/loop1
+  652  sudo pvremove /dev/loop2
+  653  sudo pvremove /dev/loop0
+  654  sudo pvdisplay
+  655  top
+  656  man ls
+  657  id
+  658  lsof
+  659  cwd
+  660  htop 
+  661  pgrep bash
+  662  pgrep sshd
+  663  pgrep -u $(whoami)
+  664  pgrep -u root firefox
+  665  vmstat
+  666  free -m
+  667  ls -li
+  668  cat /etc/passwd
+  669  cd /home/naveen
+  670  cd home
+  671  pwd
+  672  cd /home/
+  673  cd /naveen
+  674  ls -l
+  675  cd naveen/
+  676  sudo userdel seema
+  677  cd /home
+  678  ls -l
+  679  sudo usedel -r seema
+  680  sudo userdel -r seema
+  681  history
+  682  cat /etc/passwd
+  683  cd /home/
+  684  ls -l
+  685  sudo useradd testuser1
+  686  cat /etc/passwd
+  687  sudo useradd -m devuser
+  688  ls -ld /home/devuser
+  689  grep devuser /etc/passwd
+  690  sudo useradd -m -G seemafamily, seemabrothers adminuser
+  691  sudo useradd -m -G sudo, users adminuser
+  692  sudo useradd -m -G users adminuser
+  693  id adminuser
+  694  passwd
+  695  sudo -i
+  696  cd
+  697  passwd
+  698  cat /etc/passwd
+  699  sudo passwd devuser
+  700  su devuser
+  701  sudo grep /etc/shadow
+  702  grep testuser1 /etc/shadow
+  703  sudo grep testuser1 /etc/shadow
+  704  sudo passwd -l testuser1
+  705  sudo grep testuser1 /etc/shadow
+  706  su - testuser1
+  707  sudo passwd -u testuser1
+  708  sudo grep testuser1 /etc/shadow
+  709  sudo groupadd developers
+  710  sudo grep devlopers /etc/group
+  711  cat /etc/group
+  712  sudo usermod -aG developers devuser
+  713  id devuser
+  714  sudo groupadd ops
+  715  sudo grep devuser /etc/passwd
+  716  sudo usermod -g ops devuser
+  717  sudo grep devuser /etc/passwd
+  718  id devuser
+  719  su devuser
+  720  sudo mkdir /data/users
+  721  sudo mkdir /data
+  722  ls -l
+  723  cd /data
+  724  ls -l
+  725  cd 
+  726  ls -lh grep data
+  727  cd /home
+  728  ls -l
+  729  cd 
+  730  ls -l
+  731  cd /data
+  732  sudo mkdir /users
+  733  ls -l
+  734  sudo /data
+  735  sudo cd /data/users
+  736  ls -l
+  737  sudo grep devuser /etc/passwd
+  738  cd
+  739  sudo usermod -s /bin/sh devuser
+  740  sudo grep devuser /etc/passwd
+  741  sudo delete testuser1
+  742  sudo userdel testuser1
+  743  sudo grep testuser1 /etc/passwd
+  744  cat /etc/passwd
+  745  grep testuser1 /etc/passwd
+  746  sudo userdel -r devuser
+  747  sudo userdel devuser
+  748  cat /etc/passwd
+  749  sudo groupadd projects
+  750  grep projects /etc/group
+  751  sudo groupmod -n seemafamily projects
+  752  grep seemafamily /etc/group
+  753  grep projects /etc/group
+  754  grep ops /etc/group
+  755  sudo groupdel ops
+  756  grep ops /etc/group
+  757  sudo groupdel seemafamily 
+  758  grep seemafamily /etc/group
+  759  id
+  760  id adminuser
+  761  sudo userdel adminuser
+  762  id adminuser
+  763  whoami
+  764  cat /etc/passwd | tail -n 5
+  765  cat /etc/shadow | tail -n 5
+  766  sudo cat /etc/shadow | tail -n 5
+  767  dockers ps -q
+  768  docker ps -q
+  769  docker ps -a
+  770  docker login
+  771  df -hi
+  772  docker -exec -it $(docker ps -q) /bin/bash
+  773  docker version
+  774  docker status
+  775  docker exec -it $(docker ps -q) /bin/bash
+  776  which ssh
+  777  sudo apt update
+  778  sudo apt install openssh-server
+  779  ssh remote_user@your_remote_server_ip
+  780  sudo vim /etc/ssh/sshd_config
+  781  sudo service ssh restart
+  782  sudo service ssh status
+  783  ss -tnlp | grep 2222
+  784  sudo vim /etc/ssh/sshd_config
+  785  sudo service ssh restart
+  786  sudo service ssh status
+  787  ss -tnlp | grep 2222
+  788  sudo vim /etc/ssh/sshd_config
+  789  ip addr show eth0 | grep -oP 'inet\s\K[\d.]+'
+  790  sudo vim /etc/ssh/sshd_config
+  791  sudo service ssh status
+  792  sudo service ssh stop
+  793  sudo systemctl disable ssh
+  794  sudo systemctl stop ssh.socket
+  795  sudo service ssh stop
+  796  sudo service ssh status
+  797  sudo systemctl status ssh.service
+  798  sudo systemctl disable ssh
+  799  sudo apt install neofetch
+  800  sudo apt install htop tree
+  801  sudo apt install net-tools
+  802  neofetch
+  803  htop
+  804  tree
+  805  ifconfig
+  806  netstat
+  807  sudo apt remove neofetch
+  808  neofetch
+  809  sudo show neofetch
+  810  apt show neofetch
+  811  apt show curl
+  812  apt show curl -a
+  813  apt search webserver
+  814  dpkg -S /bin/ls
+  815  apt -S /bin/ls
+  816  htop 
+  817  top 
+  818  getenforce
+  819  sudo apt install selinux-utils
+  820  getenforce
+  821  man sudo-root
+  822  man man
+  823  ls -la
+  824  lsblk
+  825  df
+  826  du 
+  827  du -h
+  828  terraform
+  829  sudo apt update && sudo apt install -y gnupg software-properties-common curl
+  830  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+  831  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+  832  https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+  833  sudo apt update
+  834  sudo apt install terraform
+  835  terraform -version
+  836  terraform -install-autocomplete
+  837  mkdir local-null-example/
+  838  cd local-null-example/
+  839  vi main.tf
+  840  ls -l
+  841  touch main.tf
+  842  ls -l
+  843  vi main.tf
+  844  terraform init
+  845  terraform apply
+  846  mkdir docker-example
+  847  cd docker-example/
+  848  cd
+  849  rm -rf docker-example
+  850  ls -l
+  851  cd local-null-example/
+  852  ls -l
+  853  cd docker-example/
+  854  cd ..
+  855  rm docker-example/
+  856  rm -rf docker-example/
+  857  ls -l
+  858  cd
+  859  clear
+  860  mkdir docker-example
+  861  cd docker-example/
+  862  ls -l
+  863  touch main.tf
+  864  ls -l
+  865  vi main.tf
+  866  terraform init
+  867  terraform apply
+  868  vi main.tf
+  869  terraform init
+  870  terraform apply
+  871  ifconfig
+  872  sudo -i
+  873  CREATE DATABASE practice_db;
+  874  USE practice_db;
+  875  mysql -version
+  876  sudo -i
+  877  minikube start
+  878  kubectl get pods
+  879  docker ps
+  880  argocd version --client
+  881  kubectl create namespace argocd
+  882  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/${ARGO_CD_VERSION}/manifests/install.yaml
+  883  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  884  kubectl get pods -n argocd
+  885  kubectl port-forward svc/argocd-server -n argocd 8080:443
+  886  ifconfig
+  887  kubectl port-forward svc/argocd-server -n argocd 8080:443
+  888  curl google.com
+  889  curl facebook.com
+  890  curl flipkart.com
+  891  curl amazon.com
+  892  kubectl get pods -n argocd
+  893  minikube start
+  894  kubectl create namespace argocd
+  895  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  896  kubectl get pods -n argocd
+  897  kubectl port-forward svc/argocd-server -n argocd 8080:443
+  898  kubectl get svc -n argocd
+  899  kubectl port-forward svc/argocd-server -n argocd 8080:443 --v=9
+  900  sudo lsof -i :8080
+  901  kubectl get pods -n argocd
+  902  argocd-server-xxxxx   1/1   Running   0   ...
+  903  kubectl port-forward svc/argocd-server -n argocd 8888:443
+  904  kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+  905  kubectl get svc argocd-server -n argocd
+  906  kubectl get svc -n argocd
+  907  kubectl get pods -n argocd
+  908  ifconfig
+  909  minikube ip
+  910  curl -k https://localhost:32357
+  911  kubectl port-forward svc/argocd-server -n argocd 8080:443
+  912  curl -k https://localhost:8080
+  913  sudo -i
+  914  curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-amd64
+  915  mv ./kind ~/.local/bin/kind
+  916  mv ./kind ~/usr/local/bin
+  917  ls -l
+  918  history
+  919  git clone https://github.com/naveenseema/naveen-devops-docs.git
+  920  ls -l
+  921  cd git-seema/
+  922  ls -l
+  923  cat README.md 
+  924  LS -L
+  925  ls -l
+  926  cd mydata/
+  927  ls -l
+  928  cat ansible.txt 
+  929  git clone https://github.com/naveenseema/git-seema.git
+  930  git status
+  931  git add .
+  932  git add history learning2.txt
+  933  git add | history > learning2.txt
+  934  git add . history > learning.txt
+  935  git init
+  936  git add .history.txt
+  937  history
+  938  git add .
+  939  cd 
+  940  git add .
+  941  git clone https://github.com/naveenseema/git-seema.git
+  942  cd git-seema/
+  943  ls -l
+  944  cd mydata/
+  945  ls -l
+  946  git add | history > learning.txt
+  947  git add . | history > learning.txt
+  948  git add .
+  949  git commit -m "my learning history"
+  950  git push -u origin main
+  951  git push -u origin master
+  952  git status
+  953  git push origin master
+  954  git clone https://github.com/naveenseema/git-seema.git
+  955  cd
+  956  rm -rf git-seema
+  957  ls -l
+  958  git clone fatal: destination path 'git-seema' already exists and is not an empty directory.
+  959  git clone https://github.com/naveenseema/git-seema.git
+  960  ls -l
+  961  cd git-seema/
+  962  ls -l
+  963  cd mydata
+  964  git status
+  965  git init
+  966  git add . | history > learning.txt
+  967  git add .
+  968  git commit -m "my learning history"
+  969  git push origin master
+  970  git push -u origin master
+  971  history
+  972  histroy | tail -n 100
+  973  history | tail -n 150
+  974  git remote -v
+  975  git remote add origin https://github.com/naveenseema/git-seema.git
+  976  git push -u origin master
+  977  git push -u origin main
+  978  git status
+  979  ls -l
+  980  cat learning.txt 
+  981  git add learning.txt
+  982  git add .
+  983  git commit -m "my learning history"
+  984  git push origin main
+  985  git status
+  986  git branch -M main
+  987  git status
+  988  git push -u origin main
+  989  git pull origin main --allow-unrelated-histories
+  990  git push origin main
+  991  cd ..
+  992  rm -rf mydata
+  993  ls -l
+  994  git push - origin main
+  995  git push -u origin main
+  996  git clone https://github.com/naveenseema/naveen-devops-docs.git
+  997  cd
+  998  git clone https://github.com/naveenseema/naveen-devops-docs.git
+  999  ls -l
+ 1000  git add learning.txt
+ 1001  git add . learning.txt
+ 1002  exit
+ 1003  git status
+ 1004  git clone https://github.com/naveenseema/naveen-devops-docs.git
+ 1005  git init
+ 1006  git status
+ 1007  cd naveen-devops-docs/
+ 1008  git clone https://github.com/naveenseema/naveen-devops-docs.git
+ 1009  git status
+ 1010  cat learning.txt
+ 1011  history > learning.txt
