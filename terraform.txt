@@ -1,0 +1,67 @@
+✅ Terraform Setup & Initialization
+nginx
+Copy
+Edit
+terraform version                  # Check Terraform version
+terraform init                     # Initialize a Terraform configuration directory
+terraform providers                # Show the providers required
+🧪 Terraform Validation & Formatting
+pgsql
+Copy
+Edit
+terraform validate                 # Validate the configuration files
+terraform fmt                      # Format configuration files to canonical format
+terraform fmt -recursive           # Format files recursively in subfolders
+📋 Terraform Planning
+nginx
+Copy
+Edit
+terraform plan                     # Show changes without applying
+terraform plan -out=plan.out       # Save the plan to a file
+🚀 Terraform Apply & Destroy
+nginx
+Copy
+Edit
+terraform apply                    # Apply the changes required to reach the desired state
+terraform apply plan.out          # Apply a saved plan
+terraform destroy                  # Destroy all managed infrastructure
+📝 Terraform Configuration Management
+perl
+Copy
+Edit
+terraform get                      # Download modules mentioned in the configuration
+terraform output                   # Show output values from state
+terraform output <variable>        # Show a specific output variable
+terraform state list               # List resources in the state file
+terraform state show <resource>    # Show attributes of a specific resource
+terraform state rm <resource>      # Remove a resource from state
+terraform taint <resource>         # Mark a resource for recreation
+terraform untaint <resource>       # Unmark resource so it won’t be recreated
+🧩 Terraform Modules
+nginx
+Copy
+Edit
+terraform get                      # Download and install modules
+terraform init -upgrade            # Upgrade modules to latest versions
+🔐 Terraform Backend & Locking
+nginx
+Copy
+Edit
+terraform init -backend-config="key=value"  # Configure remote backends
+terraform force-unlock <LOCK_ID>            # Manually unlock the state
+📦 Terraform Workspace (for multi-env)
+pgsql
+Copy
+Edit
+terraform workspace list           # List all workspaces
+terraform workspace new <name>     # Create a new workspace
+terraform workspace select <name>  # Switch to a workspace
+terraform workspace delete <name>  # Delete a workspace
+🧹 Terraform Cleanup
+bash
+Copy
+Edit
+terraform refresh                  # Update the state file with real-world infrastructure
+terraform state rm <resource>      # Remove resource from state
+terraform state mv <src> <dst>     # Move resource in state file
+
