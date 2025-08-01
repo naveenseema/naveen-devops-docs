@@ -1,0 +1,102 @@
+The vi editor is a powerful, text-based editor that has been a staple of Unix-like systems for decades. It's known for its modal interface, which can be a bit confusing for new users, but is incredibly efficient once you get the hang of it.
+
+vi has two main modes:
+
+Command Mode: This is the default mode when you open vi. In this mode, keystrokes are interpreted as commands to move the cursor, delete text, copy, paste, and more. You cannot directly type text into the file in this mode.
+
+Insert Mode: In this mode, you can type and insert text into the file just like in a regular text editor.
+
+To switch between these modes, you use the Esc key to go from Insert Mode back to Command Mode, and specific commands (like i, a, o, etc.) to enter Insert Mode from Command Mode.
+
+Here's a breakdown of some of the most common vi commands, categorized for easier learning:
+
+Starting and Exiting vi
+Command	Description
+vi filename	Open or create a file named filename.
+:q	Quit the editor (only works if no changes have been made).
+:q!	Quit the editor without saving changes.
+:w	Save the file (write to disk).
+:wq	Save the file and quit.
+ZZ	A shortcut to save and quit (same as :wq).
+:w filename	Save the file with a different name.
+
+Export to Sheets
+Entering Insert Mode
+You must be in Command Mode to use these.
+
+Command	Description
+i	Insert text before the current cursor position.
+a	Append text after the current cursor position.
+I	Insert text at the beginning of the current line.
+A	Append text at the end of the current line.
+o	Open a new line below the current line and enter Insert Mode.
+O	Open a new line above the current line and enter Insert Mode.
+r	Replace a single character under the cursor.
+R	Replace characters, overwriting them until you press Esc.
+
+Export to Sheets
+Cursor Movement (Command Mode)
+These commands move the cursor without changing text.
+
+Command	Description
+h	Move left one character.
+j	Move down one line.
+k	Move up one line.
+l	Move right one character.
+w	Move to the beginning of the next word.
+b	Move to the beginning of the previous word.
+e	Move to the end of the current word.
+0 (zero)	Move to the beginning of the current line.
+$	Move to the end of the current line.
+G	Go to the last line of the file.
+nG	Go to line n (e.g., 5G goes to line 5).
+H	Move to the top of the screen.
+M	Move to the middle of the screen.
+L	Move to the bottom of the screen.
+Ctrl + f	Scroll forward a full screen.
+Ctrl + b	Scroll backward a full screen.
+Ctrl + d	Scroll forward a half screen.
+Ctrl + u	Scroll backward a half screen.
+
+Export to Sheets
+Deleting Text (Command Mode)
+Command	Description
+x	Delete the character under the cursor.
+dw	Delete from the cursor to the end of the current word.
+dd	Delete the entire current line.
+ndd	Delete n lines starting from the current line (e.g., 5dd deletes 5 lines).
+D	Delete from the cursor to the end of the current line.
+
+Export to Sheets
+Copy, Cut, and Paste (Yank and Put)
+vi uses the terms "yank" for copy and "put" for paste.
+
+Command	Description
+yy	Yank (copy) the current line.
+nyy	Yank n lines starting from the current line (e.g., 3yy copies 3 lines).
+yw	Yank (copy) the current word.
+p	Put (paste) the yanked or deleted text after the cursor.
+P	Put (paste) the yanked or deleted text before the cursor.
+
+Export to Sheets
+Searching and Replacing
+Command	Description
+/string	Search forward for string.
+?string	Search backward for string.
+n	Go to the next occurrence of the search string in the same direction.
+N	Go to the next occurrence in the opposite direction.
+:s/old/new/	Replace the first occurrence of old with new on the current line.
+:s/old/new/g	Replace all occurrences of old with new on the current line.
+:%s/old/new/g	Replace all occurrences of old with new throughout the entire file.
+
+Export to Sheets
+Other Useful Commands
+Command	Description
+u	Undo the last change.
+Ctrl + r	Redo the last change (opposite of u).
+. (dot)	Repeat the last command.
+:set number	Display line numbers.
+:set nonumber	Turn off line numbers.
+
+Export to Sheets
+
