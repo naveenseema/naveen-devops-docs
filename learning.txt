@@ -998,3 +998,607 @@
  1009  git status
  1010  cat learning.txt
  1011  history > learning.txt
+ 1011  history > learning.txt
+ 1012  cat learning.txt
+ 1013  git add . learning.txt
+ 1014  git add  learning.txt
+ 1015  git add .
+ 1016  git commit -m "my learning history"
+ 1017  git push -u origin master
+ 1018  clear
+ 1019  cd
+ 1020  ls -l
+ 1021  cd git-seema/
+ 1022  git clone https://github.com/naveenseema/git-seema.git
+ 1023  ls -l
+ 1024  cat learning.txt
+ 1025  history > learning.txt
+ 1026  cat learning.txt
+ 1027  git add learning.txt
+ 1028  git add
+ 1029  git add .
+ 1030  ls -l
+ 1031  git commit -m "my learning history"
+ 1032  git push -u origin main
+ 1033  git push -u origin master
+ 1034  cd
+ 1035  cd naveen-devops-docs/
+ 1036  touch terraform.txt
+ 1037  ls -l
+ 1038  vim terraform.txt
+ 1039  git clone https://github.com/naveenseema/naveen-devops-docs.git
+ 1040  git add terraform.txt
+ 1041  git add .
+ 1042  git commit -m "terraform commands"
+ 1043  git push -u origin master
+ 1044  cd
+ 1045  terraform --version
+ 1046  terraform init
+ 1047  terraform plan
+ 1048  terraform apply
+ 1049  mkdir terraform-lab
+ 1050  cd terraform-lab/
+ 1051  terraform -v
+ 1052  sudo apt update && sudo apt upgrade
+ 1053  ls -l
+ 1054  cd
+ 1055  mkdir prometheus-grafana-wsl
+ 1056  cd prometheus-grafana-wsl/
+ 1057  touch main.tf
+ 1058  touch versions.tf
+ 1059  mkdir main.tf
+ 1060  mkdir naveen.tf
+ 1061  ls -l
+ 1062  cat naveen.tf
+ 1063  cat main.tf
+ 1064  rm-rf
+ 1065  rm -rf naveen.tf
+ 1066  ls -l
+ 1067  mkdir scripts
+ 1068  cd scripts/
+ 1069  vi install_prometheus.sh
+ 1070  ls -l
+ 1071  touch install_prometheus.sh
+ 1072  ls -l
+ 1073  touch grafana.sh
+ 1074  touch configure_prometheus.sh
+ 1075  ls -l
+ 1076  cd ..
+ 1077  mkdir dashboards
+ 1078  cd dashboards/
+ 1079  touch my_dashboard.json
+ 1080  ls -l
+ 1081  cd ..
+ 1082  vi versions.tf
+ 1083  vi main.tf
+ 1084  cd scripts/
+ 1085  vi install_prometheus.sh
+ 1086  vi configure_prometheus.sh
+ 1087  ls -l
+ 1088  rm -rf grafana.sh
+ 1089  touch install_grafana.sh
+ 1090  vi install_grafana.sh
+ 1091  terraform init
+ 1092  cd ..
+ 1093  ls -l
+ 1094  sudo -i
+ 1095  sudo systemctl status grafana
+ 1096  sudo systemctl status prometheus
+ 1097  sudo systemctl uninstall prometheus
+ 1098  sudo systemctl remove prometheus
+ 1099  sudo systemctl status grafana-server
+ 1100  sudo systemctl stop prometheus
+ 1101  sudo systemctl disable prometheus
+ 1102  sudo rm -rf /etc/prometheus
+ 1103  sudo rm -rf /var/lib/prometheus
+ 1104  sudo rm -rf /usr/local/bin/prometheus
+ 1105  sudo rm -rf /usr/local/bin/promtool
+ 1106  sudo userdel -r prometheus
+ 1107  sudo groupdel prometheus
+ 1108  sudo rm -f /etc/systemd/system/prometheus.service
+ 1109  sudo systemctl daemon-reexec
+ 1110  sudo systemctl daemon-reload
+ 1111  sudo rm -rf /var/log/prometheus
+ 1112  sudo rm -rf ~/prometheus*
+ 1113  which promrtheus
+ 1114  which prometheus
+ 1115  prometheus --version
+ 1116  sudo systemctl stop grafana-server
+ 1117  sudo systemctl disable grafana-server
+ 1118  sudo systemctl stop prometheus
+ 1119  sudo systemctl disable prometheus
+ 1120  sudo systemctl stop node_exporter
+ 1121  sudo systemctl disable node_exporter
+ 1122  sudo apt remove --purge grafana -y
+ 1123  sudo apt autoremove -y
+ 1124  sudo apt remove --purge grafana -y
+ 1125  sudo apt autoremove -y
+ 1126  sudo rm -rf /usr/local/bin/node_exporter
+ 1127  sudo rm -rf /etc/systemd/system/node_exporter.service
+ 1128  rm -rf ~/node_exporter*
+ 1129  sudo systemctl daemon-reload
+ 1130  which grafana-server
+ 1131  which prometheus
+ 1132  which node_exporter
+ 1133  which grafana-server
+ 1134  cd /usr
+ 1135  ls -l
+ 1136  cd sbin
+ 1137  ls -l
+ 1138  sudo systemctl daemon-reexec
+ 1139  sudo systemctl daemon-reload
+ 1140  sudo rm -rf /usr/share/grafana
+ 1141  sudo rm -rf /etc/grafana
+ 1142  sudo rm -rf /var/lib/grafana
+ 1143  sudo rm -rf /usr/sbin/grafana-server
+ 1144  which grafana
+ 1145  ls -l
+ 1146  cd
+ 1147  sudo systemctl status
+ 1148  sudo nano /etc/wsl.conf
+ 1149  uptime
+ 1150  neofetch
+ 1151  sudo apt install neofetch
+ 1152  neofetch
+ 1153  sudo apt update
+ 1154  sudo apt upgrade -y
+ 1155  sudo groupadd --system prometheus
+ 1156  sudo useradd -s /sbin/nologin --system -g prometheus prometheus
+ 1157  sudo mkdir -p /etc/prometheus
+ 1158  sudo mkdir -p /var/lib/prometheus
+ 1159  wget https://github.com/prometheus/prometheus/releases/download/v2.53.0/prometheus-2.53.0.linux-amd64.tar.gz # Replace with the actual latest version
+ 1160  tar xvf prometheus-*.tar.gz
+ 1161  cd prometheus-*-
+ 1162  cd prometheus-*/
+ 1163  ls -l
+ 1164  sudo mv prometheus promtool /usr/local/bin/
+ 1165  sudo mv consoles/ console_libraries/ /etc/prometheus/
+ 1166  sudo mv prometheus.yml /etc/prometheus/prometheus.yml
+ 1167  sudo chown -R prometheus:prometheus /etc/prometheus/ /var/lib/prometheus/
+ 1168  cd /etc
+ 1169  ls -l
+ 1170  cd prometheus
+ 1171  ls -l
+ 1172  sudo chown prometheus:prometheus /usr/local/bin/prometheus
+ 1173  v
+ 1174  sudo chown prometheus:prometheus /usr/local/bin/promtool
+ 1175  sudo nano /etc/systemd/system/prometheus.service
+ 1176  vim /etc/systemd/system/prometheus.service
+ 1177  sudo vim /etc/systemd/system/prometheus.service
+ 1178  sudo systemctl daemon-reload
+ 1179  sudo systemctl status prometheus
+ 1180  sudo systemctl enable prometheus
+ 1181  sudo systemctl status prometheus
+ 1182  ifconfig
+ 1183  sudo systemctl status prometheus
+ 1184  sudo systemctl start prometheus
+ 1185  sudo systemctl status prometheus
+ 1186  sudo /etc
+ 1187  sudo cd /etc
+ 1188  cd /etc
+ 1189  ls -l
+ 1190  cd prometheus/
+ 1191  ls -l
+ 1192  vi prometheus.yml
+ 1193  sudo vim prometheus.yml
+ 1194  sudo systemctl restart prometheus
+ 1195  sudo systemctl status prometheus
+ 1196  sudo systemctl status node_exporter
+ 1197  sudo nano /etc/prometheus/prometheus.yml
+ 1198  which node_exporter
+ 1199  ls -l /etc/systemd/system/node_exporter.service
+ 1200  cd
+ 1201  cd /etc/systemd/system
+ 1202  ls -l
+ 1203  ls: cannot access '/etc/systemd/system/node_exporter.service': No such file or directory
+ 1204  sudo nano /etc/systemd/system/node_exporter.service
+ 1205  sudo vim /etc/systemd/system/node_exporter.service
+ 1206  sudo systemctl daemon-reload
+ 1207  sudo systemctl status node_exporter
+ 1208  sudo systemctl enable node_exporter
+ 1209  sudo systemctl status node_exporter
+ 1210  ls -l /etc/systemd/system/node_exporter.service
+ 1211  cat /etc/systemd/system/node_exporter.service
+ 1212  sudo systemctl start node_exporter
+ 1213  sudo systemctl status node_exporter
+ 1214  journalctl -u node_exporter --no-pager
+ 1215  sudo netstat -tulpn | grep 9100
+ 1216  netstat
+ 1217  sudo nano /etc/systemd/system/node_exporter.service
+ 1218  sudo vim /etc/systemd/system/node_exporter.service
+ 1219  sudo systemctl daemon-reload
+ 1220  sudo systemctl restart node_exporter
+ 1221  sudo cd /etc/systemd/system/
+ 1222  sudo vim prometheus.yml
+ 1223  ls -l
+ 1224  sudo vim /etc/prometheus/prometheus.yml
+ 1225  sudo systemctl restart prometheus
+ 1226  sudo systemctl status prometheus
+ 1227  sudo systemctl status node_exporter
+ 1228  cat /etc/systemd/system/node_exporter.service
+ 1229  sudo netstat -tulpn | grep 9101
+ 1230  cat /etc/systemd/system/node_exporter.service
+ 1231  neofetch
+ 1232  prometheus --config.file=/etc/prometheus/prometheus.yml
+ 1233  terraform init
+ 1234  cd
+ 1235  ls -l
+ 1236  cat greet.sh
+ 1237  ./greet.sh
+ 1238  cat /etc/passwd
+ 1239  cd /etc
+ 1240  la -l
+ 1241  cd vim
+ 1242  ls -l
+ 1243  cd vimrc
+ 1244  cat vimrc
+ 1245  ls -l
+ 1246  cat vimrc.tiny
+ 1247  ls -l /etc/passwd
+ 1248  ls -l /etc/shadow
+ 1249  terraform plan
+ 1250  neofetch
+ 1251  sudo -i
+ 1252  minikube status
+ 1253  minikube start
+ 1254  kubectl status
+ 1255  minikube status
+ 1256  minkueb version
+ 1257  minikube version
+ 1258  kubectl get pods
+ 1259  kubectl create deployment nginx-depl --image=nginx
+ 1260  kubectl get pods
+ 1261  kubectl get replicaset
+ 1262  kubectl get replicaset nginx
+ 1263  kubectl get replicaset nginx nginx-depl-68c944fcbc
+ 1264  neofetch
+ 1265  kubectl edit deployment nginx
+ 1266  kubectl get replicaset nginx-depl
+ 1267  kubectl get pods
+ 1268  kubectl edit deployment nginx-depl
+ 1269  kubectl delete deployment nginx
+ 1270  kubectl delete deployment nginx-depl
+ 1271  kubectl create deployment nginx --image=nginx
+ 1272  kubectl get pods
+ 1273  kubectl get replicaset nginx
+ 1274  kubectl create deployment mongo --image=mongo
+ 1275  kubectl get pod
+ 1276  kubectl get replicaset mongo
+ 1277  kubectl logs my-app-c8d5f5bbd-qlfx4
+ 1278  kubectl get pod
+ 1279  kubectl describe mongo-7654d9ff55-rbjrc
+ 1280  kubectl describe
+ 1281  kubectl describe my-app-c8d5f5bbd-w7bg7
+ 1282  kubectl describe pod my-app-c8d5f5bbd-w7bg7
+ 1283  kubectl get pod
+ 1284  kubectl exec -it my-app-c8d5f5bbd-w7bg7 --/bin/bash
+ 1285  kubectl exec -it my-app-c8d5f5bbd-w7bg7 -- bin/bash
+ 1286  kubectl exec -it my-app-c8d5f5bbd-w7bg7 -- /bin/bash
+ 1287  kubectl exec -it my-app-c8d5f5bbd-w7bg7 -- /bin/sh
+ 1288  docker exec -it my-app-c8d5f5bbd-w7bg7 -- /bin/sh
+ 1289  kubectl exec -it my-app-c8d5f5bbd-w7bg7 -- ls /bin
+ 1290  docker exec -it my-app-c8d5f5bbd-w7bg7 -- /bin/ash
+ 1291  kubectl exec -it my-app-c8d5f5bbd-w7bg7 -- /bin/ash
+ 1292  neofetch
+ 1293  uptime
+ 1294  kubectl get deployment
+ 1295  kubectl delete mongo
+ 1296  kubectl delete deployment mongo
+ 1297  kubectl get deployment
+ 1298  history
+ 1299  uptime
+ 1300  neofetch
+ 1301  helm version
+ 1302  helm install nginx
+ 1303  helm install --image=nginx
+ 1304  kubectl apply -f nginx-deployment.yaml
+ 1305  kubectl apply -f nginx.service.yaml
+ 1306  kubectl apply -f nginx-service.yaml
+ 1307  kubectl get pods
+ 1308  kubectl delete deployment nginx-5869d7778c-4p8gt
+ 1309  kubectl get deployments
+ 1310  kubectl delete deployments nginx
+ 1311  kubectl apply -f nginx-service.yaml
+ 1312  kubectl apply -f mongo-deployment.yaml
+ 1313  kubectl apply -f mongodb-deployment.yaml
+ 1314  kubectl get svc -A --output=wide | grep 30080
+ 1315  kubectl get pods
+ 1316  kubectl get services
+ 1317  kubectl get nodes
+ 1318  docker network create elsatic
+ 1319  docker run -d --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:8.13.4 # Use your desired version
+ 1320  sudo apt update
+ 1321  sudo apt install openjdk-11-jdk
+ 1322  wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+ 1323  echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+ 1324  sudo apt update
+ 1325  sudo apt install elasticsearch
+ 1326  sudo systemctl daemon-reload
+ 1327  sudo systemctl enable elasticsearch.service
+ 1328  sudo systemctl start elasticsearch.service
+ 1329  sudo systemctl status elasticsearch.service
+ 1330  cd /etc
+ 1331  ls -l
+ 1332  cd elasticsearch/
+ 1333  cat elasticsearch
+ 1334  sudo cd /elasticsearch
+ 1335  vi elasticsearch
+ 1336  sudo chown -R $USER:$USER elasticsearch/
+ 1337  cd elasticsearch
+ 1338  ls -l
+ 1339  vi elasticsearch.yml
+ 1340  sudo chown -R $USER:$s elasticsearch/
+ 1341  ls -ld elasticsearch/
+ 1342  cd
+ 1343  cd /etc
+ 1344  ls -ld elasticsearch
+ 1345  cd elasticsearch
+ 1346  ls -l
+ 1347  cd
+ 1348  rm -rf elasticsearch
+ 1349  cd /etc
+ 1350  ls -l
+ 1351  ls -ld elasticsearch
+ 1352  rm -rf elasticsearch
+ 1353  sudo -i
+ 1354  ls -ld elasticsearch
+ 1355  df -hT
+ 1356  docker login
+ 1357  docker images
+ 1358  docker rm d3a981d1bf25
+ 1359  docker run rm --elasticsearch
+ 1360  docker run --rm elasticsearch
+ 1361  docker rmi d3a981d1bf25
+ 1362  docker rmi -f  d3a981d1bf25
+ 1363  docker images
+ 1364  exit
+ 1365  cd /etc
+ 1366  ls -ld elasticsearch
+ 1367  rm -rf elasticsearch
+ 1368  uptime
+ 1369  neofetch
+ 1370  sudo -i
+ 1371  uptime
+ 1372  minikube status
+ 1373  minikube start
+ 1374  kubectl get nodes
+ 1375  kubectl get pods
+ 1376  mkdir k8s-app-lab
+ 1377  ls -l
+ 1378  cd k8s-app-lab/
+ 1379  mkdir forntend
+ 1380  cd forntend/
+ 1381  touch index.html
+ 1382  cd ..
+ 1383  mkdir backend
+ 1384  cd backend/
+ 1385  touch server.js
+ 1386  cd ..
+ 1387  mkdir manifests
+ 1388  cd manifests/
+ 1389  touch mongo-deployment.yaml
+ 1390  touch backend-deployment.yaml
+ 1391  touch frontend-deployment.yaml
+ 1392  touch mango-secret.yaml
+ 1393  touch configmap.yaml
+ 1394  touch ingress.yaml
+ 1395  touch namespace.yaml
+ 1396  vi index.html
+ 1397  ls -l
+ 1398  cd ..
+ 1399  ls -l
+ 1400  cd backend
+ 1401  ls -l
+ 1402  vi server.js
+ 1403  touch frontend
+ 1404  ls -l
+ 1405  rm -rf frontend
+ 1406  ls -l
+ 1407  cd ..
+ 1408  touch Dockerfile.frontend
+ 1409  touch Dockerfile.backend
+ 1410  ls -l
+ 1411  cat server.js
+ 1412  cd backend/
+ 1413  ls -l
+ 1414  cat server.js
+ 1415  cd ..
+ 1416  vi Dockerfile.frontend
+ 1417  vi Dockerfile.backend
+ 1418  eval $(minikube docker-env)
+ 1419  docker build -t my-frontend:v1 -f Dockerfile .
+ 1420  docker build -t my-frontend:v1 -f Dockerfile .frontend
+ 1421  docker build -t my-frontend:v1 -f Dockerfile.frontend
+ 1422  docker build -t my-frontend:v1 -f Dockerfile.frontend .
+ 1423  ls -l
+ 1424  cd frontend
+ 1425  ls -l
+ 1426  cat index.html
+ 1427  cd backend
+ 1428  cd ..
+ 1429  cd backend
+ 1430  ls -l
+ 1431  cd ..
+ 1432  ls -l
+ 1433  rm -rf forntend/
+ 1434  ls -l
+ 1435  mkdir frontend
+ 1436  cd frontend/
+ 1437  vi index.html
+ 1438  cd ..
+ 1439  docker build -t my-frontend:v1 -f Dockerfile.frontend .
+ 1440  docker build -t my-backend:v1 -f Dockerfile.backend .
+ 1441  cd manifests/
+ 1442  ls -l
+ 1443  vi namespace.yaml
+ 1444  vi  mango-secret.yaml
+ 1445  vi configmap.yaml
+ 1446  vi mongo-deployment.yaml
+ 1447  vi backend-deployment.yaml
+ 1448  vi frontend-deployment.yaml
+ 1449  cd ..
+ 1450  kubectl apply -f manifests/namespace.yaml
+ 1451  kubectl apply -f manifests/mongo-secret.yaml
+ 1452  mv  mango-secret.yaml mongo-secret.yaml
+ 1453  cd manifests/
+ 1454  ls -l
+ 1455  mv  mango-secret.yaml mongo-secret.yaml
+ 1456  kubectl apply -f manifests/mongo-secret.yaml
+ 1457  ls -l
+ 1458  cat mongo-secret.yaml
+ 1459  cd ..
+ 1460  kubectl apply -f manifests/mongo-secret.yaml
+ 1461  kubectl apply -f manifests/configmap.yaml
+ 1462  kubectl apply -f manifests/mongo-deployment.yaml
+ 1463  kubectl apply -f manifests/backend-deployment.yaml
+ 1464  kubectl apply -f manifests/frontend-deployment.yaml
+ 1465  kubectl get all -n myapp
+ 1466  kubectl get svc -n myapp frontend
+ 1467  minikube ip
+ 1468  kubectl get pods
+ 1469  minikube service your-frontend-service-name
+ 1470  minikube service list
+ 1471  kubectl edit svc frontend -n myapp
+ 1472  kubectl logs <frontend-pod-name> -n myapp
+ 1473  kubectl get pods
+ 1474  kubectl get pods -n myapp -o wide
+ 1475  kubectl get svc backend -n myapp
+ 1476  kubectl edit svc backend -n myapp
+ 1477  history
+ 1478  neofetch
+ 1479  ifconfig
+ 1480  cd
+ 1481  cd k8s-app-lab/
+ 1482  ls -l
+ 1483  wsl -l -v
+ 1484  cd
+ 1485  wsl -l -v
+ 1486  sudo apt install wsl
+ 1487  wsl -l -v
+ 1488  wsl.exe --status
+ 1489  mkdir elastic-stack
+ 1490  cd elastic-stack/
+ 1491  touch docker-compose.yml
+ 1492  vi docker-compose.yml
+ 1493  docker-compose up -d
+ 1494  ifconfig
+ 1495  docker ps
+ 1496  docker logs elasticsearch
+ 1497  docker logs kibana
+ 1498  sudo sysctl -w vm.max_map_count=262144
+ 1499  docker-compose down
+ 1500  docker-compose down -v
+ 1501  docker-compose up
+ 1502  uptime
+ 1503  neofetch
+ 1504  ls -l
+ 1505  cat docker-compose.yml
+ 1506  cd
+ 1507  cat /etc/psswd
+ 1508  cat /etc/passwd
+ 1509  cat /etc/shadow
+ 1510  sudo -i
+ 1511  ifocnfig
+ 1512  ifconfig
+ 1513  exit
+ 1514  sudo -i
+ 1515  neofetch
+ 1516  uptime
+ 1517  kubectl get endpoints
+ 1518  minikube version
+ 1519  minikube status
+ 1520  minikube start
+ 1521  kubectl get endpoints
+ 1522  uptime
+ 1523  sudo apt update
+ 1524  sudo apt install ansible
+ 1525  ansible --version
+ 1526  mkdir ansible_practice
+ 1527  cd ansible_practice/
+ 1528  touch hosts.ini
+ 1529  vi hosts.ini
+ 1530  ansible local -i hosts.ini -m ping
+ 1531  ping
+ 1532  vi hosts.ini
+ 1533  ls -l
+ 1534  ansible all -i hosts.ini -m ping
+ 1535  ping
+ 1536  ansible all -i ./hosts.ini -m ping
+ 1537  ping
+ 1538  ansible local -i hosts.ini -m ansible.builtin.ping
+ 1539  ping
+ 1540  ansible all -i hosts.ini -m ansible.builtin.ping -vvv
+ 1541  touch ping_playbook.yml
+ 1542  ls -l
+ 1543  vi ping_playbook.yml
+ 1544  ansible-playbook ping_playbook.yml
+ 1545  ansible-playbook ping_playbook.yml -i hosts.ini
+ 1546  ping
+ 1547  vi ping_playbook.yml
+ 1548  ansible-plyabook ping_playbook.yml
+ 1549  ansible-playbook ping_playbook.yml
+ 1550  ansible-playbook ping_playbook.yml -i hosts.ini
+ 1551  vi ping_playbook.yml
+ 1552  ansible-playbook ping_playbook.yml -i hosts.ini
+ 1553  ls -l
+ 1554  ls -l ~/ansible_test_dir
+ 1555  cat welcome.txt
+ 1556  cat ~/ansible_test_dir/welcome.txt
+ 1557  cd  ~/ansible_test_dir
+ 1558  ls -l
+ 1559  cd..
+ 1560  cd ..
+ 1561  cd ansible_practice
+ 1562  ls -l
+ 1563  cd
+ 1564  ls -l
+ 1565  uptime
+ 1566  cd ansible_practice
+ 1567  touch neofetch_playbook.yml
+ 1568  vi neofetch_playbook.yml
+ 1569  ansible-playbook neofetch_palybook.yml
+ 1570  ansible-playbook neofetch_palybook.yml -i hosts.ini
+ 1571  ansible-playbook neofetch_playbook.yml -i hosts.ini
+ 1572  vi neofetch_playbook.yml
+ 1573  ansible-playbook neofetch_playbook.yml -i hosts.ini
+ 1574  ansible-playbook neofetch_playbook.yml -i hosts.ini --ask-become-pass
+ 1575  cowsay
+ 1576  cowsay "Ansible is awesome!"
+ 1577  touch apache_playbook.yml
+ 1578  vi apache_playbook.yml
+ 1579  ansible-playbook apache_palybook.yml -i hosts.ini -ask-become-pass
+ 1580  ansible-playbook apache_palybook.yml -i hosts.ini --ask-become-pass
+ 1581  ansible-playbook apache_playbook.yml -i hosts.ini --ask-become-pass
+ 1582  vi apache_playbook.yml
+ 1583  ansible-playbook apache_playbook.yml -i hosts.ini --ask-become-pass
+ 1584  uptime
+ 1585  touch mariadb.yaml
+ 1586  vi mariadb.yaml
+ 1587  ansible-playbook mariadb_playbook -i hosts.ini --ask-become-pass
+ 1588  ansible-playbook mariadb -i hosts.ini --ask-become-pass
+ 1589  ansible-playbook mariadb.yaml -i hosts.ini --ask-become-pass
+ 1590  sudo systemctl mariadb
+ 1591  sudo systemctl status mariadb
+ 1592  ansible-galaxy collection install community.mysql
+ 1593  vi mariadb.yaml
+ 1594  ansible-playbook mariadb.yaml -i hosts-ini --ask-become-pass
+ 1595  ansible-playbook mariadb.yaml -i hosts.ini --ask-become-pass
+ 1596  vi mariadb.yaml
+ 1597  ansible-playbook mariadb.yaml hosts.ini --ask-become-pass
+ 1598  vi mariadb.yaml
+ 1599  ansible-playbook mariadb.yaml hosts.ini --ask-become-pass
+ 1600  vi mariadb.yaml
+ 1601  ansible-playbook mariadb.yaml hosts.ini --ask-become-pass
+ 1602  ansible-playbook mariadb.yaml -i hosts.ini --ask-become-pass
+ 1603  vi mariadb.yaml
+ 1604  ansible-playbook mariadb.yaml -i hosts.ini --ask-become-pass
+ 1605  uptime
+ 1606  history
+ 1607  cd
+ 1608  ls -l
+ 1609  cd naveen-devops-docs/
+ 1610  git clone https://github.com/naveenseema/naveen-devops-docs.git
+ 1611  git status
+ 1612  ls -l
+ 1613  vi learning.txt
+ 1614  history
