@@ -1,0 +1,44 @@
+apiVersion: apps/v1                    # Resource API version
+kind: Deployment                       # Resource type (Deployment in this case)
+
+metadata:
+  name: my-app                         # Unique name for the Deployment
+  labels:                              # To organize and select Deployment resources
+    app: my-app                        # App label, useful for selectors
+
+spec:
+  replicas: 3                          # Number of desired pod replicas
+  selector:                            # Selector to match Pods to manage
+    matchLabels:                       # Labels used to identify target Pods
+      app: my-app                      # Label key-value pair to match
+
+  template:                            # Template for creating Pods
+    metadata:                          # Metadata for the Pod template
+      labels:                          # Labels assigned to the Pods
+        app: my-app                    # Label key-value pair for the Pod
+
+    spec:                              # Specification for the Pod
+      containers:                      # List of containers in the Pod
+        - name: my-app-container       # Name of the container
+          image: my-app-image:latest   # Docker image for the container
+          ports:                       # Ports exposed by the container
+            - containerPort: 8080      # Port number the container exposes
+
+          livenessProbe:               # Probe to check if the container is alive
+            httpGet:                   # HTTP request to perform the check
+              path: /healthz           # Endpoint path to check
+              port: 8080               # Port to send the HTTP request
+            initialDelaySeconds: 10    # Delay before the first probe (in seconds)
+            periodSeconds: 5           # Frequency of the probe (in seconds)
+            timeoutSeconds: 2          # Timeout for each probe (in seconds)
+            failureThreshold: 3        # Number of failures before restarting
+
+          readinessProbe:              # Probe to check if the container is ready
+            httpGet:                   # HTTP request to perform the check
+              path: /ready             # Endpoint path to check
+              port: 8080               # Port to send the HTTP request
+            initialDelaySeconds: 5     # Delay before the first probe (in seconds)
+            periodSeconds: 5           # Frequency of the probe (in seconds)
+            timeoutSeconds: 2          # Timeout for each probe (in seconds)
+            successThreshold: 1        # Number of successes before marking ready
+
