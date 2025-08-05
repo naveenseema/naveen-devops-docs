@@ -1,0 +1,56 @@
+#CI/CD CODE REVIEW WORKFLOW
+I struggled with pull requests
+until I learned the code review workflow:
+
+
+1 Pull Request
+↳ Write code on a separate git branch to isolate changes
+↳ Get instant feedback and suggestions using a code editor extension, such as CodeRabbit
+↳ Commit code with a clear commit message and push it to the remote repository
+↳ Open a pull request from the current branch into the target branch
+
+——
+
+2 CI Pipeline
+↳ Run automated checks on the code, such as unit testing and linting, to ensure code correctness
+↳ Tag one or more relevant team members to ask for review.
+
+——
+
+3 Code Review
+↳ Get a summary of code changes, issues, and auto-fix suggestions using a tool, such as CodeRabbit
+↳ Reviewer checks the changed files and leaves constructive feedback
+
+——
+
+4 Code Update
+↳ Fix the code to address the review comments
+↳ Upload changes to the same pull request and make sure automated checks pass again
+↳ Reply to the reviewer's comments
+
+——
+
+5 Deploy
+↳ Reviewer approves the pull request
+↳ Pull request gets merged into the target branch and triggers continuous deployment
+↳ CD pipeline builds and deploys the change to the staging environment
+↳ Once the staging tests pass, the change gets released to production
+
+——
+
+• Code Review: someone other than the code author examines the code.
+
+• Continuous Integration (CI): merging code changes regularly into a central repository.
+
+• Continuous Deployment (CD): automatically releasing changes that pass tests and checks into production.
+
+Remember, having more pairs of eyes is better in code reviews.
+And code reviews shouldn't slow down the development process.
+
+
+
+
+
+
+
+
