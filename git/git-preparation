@@ -1,0 +1,119 @@
+Basic Git Concepts
+1.What is Git?
+Git is a distributed version control system (DVCS) designed to track changes in source code during software development. It allows multiple developers to collaborate on a project efficiently, manage different versions of code, and revert to previous states if needed.
+
+2.What is a Version Control System (VCS)?
+ VCS is a software tool that tracks changes to files over time. It enables you to revert to specific versions, compare changes, and collaborate with others on a project.
+
+3.What is the difference between Git and GitHub?
+
+Git is the distributed version control system itself. It's a command-line tool that runs on your local machine.
+
+GitHub is a web-based platform that hosts Git repositories. It provides a graphical interface for collaboration, issue tracking, and project management, built on top of Git. Other similar platforms include GitLab and Bitbucket.
+
+4.What is a Git Repository (Repo)?
+A repository is a storage location for a project's files and its entire version history. It includes the working directory, the staging area, and the .git directory (which contains all the metadata and history). Repositories can be local (on your machine) or remote (hosted on a server like GitHub).
+
+5.What is the purpose of git init?
+This command initializes a new Git repository in the current directory, creating the .git sub-directory that contains all the necessary repository files.
+
+6.What does git clone do?
+git clone creates a local copy of an existing remote repository. It downloads the entire project history and all branches.
+
+7.What does git status do?
+git status displays the current state of your working directory and staging area. It shows which files are modified, staged, or untracked.
+
+8.What is the Staging Area (Index)?
+The staging area is an intermediate space between your working directory and your local repository. It's where you select specific changes you want to include in your next commit. git add stages changes.
+
+9.What does git add do?
+git add stages changes (modified or new files) to be included in the next commit.
+
+10.What is a Commit?
+A commit is a snapshot of your project's state at a specific point in time. It records the changes you've staged, along with a commit message explaining those changes.
+
+11.What does git commit do?
+git commit saves the staged changes to your local repository. You must provide a commit message to describe the changes.
+
+12.What is git log used for?
+git log displays the commit history of your repository, showing commit messages, authors, dates, and commit hashes.
+
+13.Branching and Merging
+What is Branching in Git and why is it important?
+Branching allows you to create an independent line of development within a repository. It's crucial for:
+
+Parallel Development: Working on new features or bug fixes without affecting the main codebase.
+
+Isolation: Keeping experimental code separate until it's ready.
+
+Organization: Managing different versions of your project.
+
+14.What does git branch do?
+git branch is used to list, create, or delete branches.
+
+15.What does git checkout do?
+git checkout is used to switch between branches or restore working tree files.
+
+16.What does git merge do?
+git merge integrates changes from one branch into another.
+
+17.What is a Merge Conflict and how do you resolve it?
+A merge conflict occurs when Git cannot automatically combine changes from two branches (e.g., when the same lines in a file have been modified differently). To resolve it, you manually edit the conflicted files, then stage and commit the resolved changes.
+
+18.Remote Repositories and Collaboration
+What are Remotes in Git?
+Remotes are references to other repositories, typically on a remote server (like GitHub). origin is the default name for the remote repository from which you cloned.
+
+19.What does git push do?
+git push uploads your local commits to a remote repository, sharing your changes with others.
+
+20.What does git pull do?
+git pull fetches changes from a remote repository and immediately merges them into your current local branch. It's a combination of git fetch and git merge.
+
+21.What does git fetch do?
+git fetch downloads commits, files, and refs from a remote repository into your local repository, but it does not merge them into your current working branch. It updates your remote-tracking branches.
+
+22.What's the difference between git fetch and git pull?
+
+git fetch downloads changes but doesn't integrate them into your working branch.
+
+git pull downloads changes AND merges them into your working branch.
+
+23.What is origin in Git?
+origin is the conventional name for the remote repository from which your local repository was cloned.
+
+Advanced Git Concepts
+24.What is git rebase?
+git rebase rewrites commit history by moving or combining a sequence of commits to a new base commit. It's often used to keep branches up-to-date with the main branch or to clean up commit history before merging.
+
+25.What is the difference between git merge and git rebase?
+
+git merge combines branches by creating a new merge commit, preserving the original commit history. This results in a non-linear history graph.
+
+git rebase reapplies commits from one branch onto another, creating a linear history. It rewrites commit history, which can be useful for a cleaner log but should be used cautiously on shared branches.
+
+26.What is git stash?
+git stash temporarily shelves (saves) your uncommitted changes in your working directory so you can switch branches or work on something else. You can later reapply these stashed changes.
+
+27.What is a "bare repository"?
+A bare repository contains only the Git repository metadata (the .git directory's contents) and no working directory. It's typically used as a central, shared repository where developers push their changes.
+
+28.What are Git Hooks?
+Git hooks are scripts that run automatically at specific points in the Git workflow (e.g., before a commit, after a push). They can be used to enforce coding standards, run tests, or automate tasks.
+
+29.What is git reset vs. git revert?
+
+git reset: Moves the current branch pointer backward to a previous commit. It can modify commit history and potentially discard commits (and changes).
+
+git revert: Creates a new commit that undoes the changes introduced by a specific previous commit. It does not alter existing commit history, making it safer for shared branches.
+
+30.What is git reflog?
+git reflog shows a log of where your HEAD and branch references have been. It's incredibly useful for recovering lost commits or undoing unintended resets or checkouts.
+
+31.What is a "detached HEAD" state?
+A detached HEAD occurs when your HEAD pointer is not pointing to a branch but to a specific commit. This means any new commits you make will not be associated with any branch, and could potentially be lost if not handled carefully.
+
+32.What is the purpose of the .gitignore file?
+The .gitignore file specifies files and directories that Git should ignore and not track. This is useful for excluding temporary files, build artifacts, or sensitive configuration files.
+
+This list covers the most frequently asked Git interview questions, from fundamental concepts to more advanced scenarios. Good luck with your interview!
